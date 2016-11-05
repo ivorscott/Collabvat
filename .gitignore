@@ -1,0 +1,6 @@
+# Files/Folders to ignore
+node_modules
+models/images
+.idea
+.DS_Store
+config.php

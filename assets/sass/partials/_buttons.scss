@@ -1,0 +1,61 @@
+/* =========================================
+   BUTTONS
+============================================ */
+
+button {
+	outline:none!important;
+}
+.btn-default {
+	box-shadow: 0 5px 0 $btn-default-border;
+}
+.btn-default:active {
+	box-shadow: 0 5px 0 $btn-default-border;
+}
+.btn-default:focus {
+	border:none;
+}
+.btn-primary {
+	box-shadow: 0 5px 0 $btn-primary-box-shadow;
+}
+.btn-primary:active {
+	box-shadow: 0 5px 0 $btn-primary-box-shadow;
+}
+.btn-primary:focus {
+	border:none;
+}
+.btn-success {
+	box-shadow: 0 5px 0 darken($btn-success-bg, 15%);
+}
+.btn-success:active {
+	box-shadow: 0 5px 0 darken($btn-success-bg, 15%);
+}
+.btn-success:focus {
+	border:none;
+}
+.btn-info {
+	box-shadow: 0 5px 0 darken($btn-info-bg, 15%);
+}
+.btn-info:active {
+	box-shadow: 0 5px 0 darken($btn-info-bg, 15%);
+}
+.btn-info:focus {
+	border:none;
+}
+.btn-warning {
+	box-shadow: 0 5px 0 darken($btn-warning-bg, 15%);
+}
+.btn-warning:active {
+	box-shadow: 0 5px 0 darken($btn-warning-bg, 15%);
+}
+.btn-warning:focus {
+	border:none;
+}
+.btn-danger {
+	box-shadow: 0 5px 0 darken($btn-danger-bg, 15%);
+}
+.btn-danger:active {
+	box-shadow: 0 5px 0 darken($btn-danger-bg, 15%);
+}
+.btn-danger:focus {
+	border:none;
+}

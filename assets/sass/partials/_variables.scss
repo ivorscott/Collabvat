@@ -1,0 +1,97 @@
+/* =========================================
+   VARIABLES
+============================================ */
+/* Fix the font path to use bootstrap-sass location in the same folder bower installs this package into */
+$icon-font-path: "../../lib/bootstrap-sass/assets/fonts/bootstrap/";
+
+//== Override Default Colors
+//
+//## brand colors for use across Bootstrap. Don't need to override values already set with same name 
+//   as bootstrap variables because they are already overridden in the mm-brand sass files
+
+/* Navbar customizations
+============================================================= */
+// Basics of a navbar
+$navbar-default-color:             $gray-dark !default;
+$navbar-default-bg:                $white !default;
+$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-padding-top:			   10px;
+$navbar-padding-bottom:			   10px;
+
+// Navbar links
+$navbar-default-link-color:                $gray-dark !default;
+$navbar-default-link-hover-color:          $brand-primary !default;
+$navbar-default-link-hover-bg:             $gray-cool-light !default;
+$navbar-default-link-active-color:         $gray-dark !default;
+$navbar-default-link-active-bg:            transparent !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+// Navbar brand label
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         $navbar-default-brand-color !default;
+$navbar-default-brand-hover-bg:            transparent !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           $gray-cool-light !default;
+$navbar-default-toggle-icon-bar-bg:        #888 !default;
+$navbar-default-toggle-border-color:       #ddd !default;
+
+//=== Inverted navbar
+// Reset inverted navbar basics
+$navbar-inverse-color:                      $white !default;
+$navbar-inverse-bg:                         $brand-primary !default;
+$navbar-inverse-border:                     $brand-dark !default;
+
+// Inverted navbar links
+$navbar-inverse-link-color:                 $white !default;
+$navbar-inverse-link-hover-color:           #fff !default;
+$navbar-inverse-link-hover-bg:              darken($navbar-inverse-bg, 2%) !default;
+$navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
+$navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-link-disabled-color:        #444 !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
+
+// Inverted navbar brand label
+$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
+$navbar-inverse-brand-hover-color:          #fff !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
+
+// Inverted navbar toggle
+$navbar-inverse-toggle-hover-bg:            #333 !default;
+$navbar-inverse-toggle-icon-bar-bg:         #fff !default;
+$navbar-inverse-toggle-border-color:        #333 !default;
+
+/* Button customizations
+============================================================= */
+
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-font-weight:                normal !default;
+
+$btn-default-color:              #333 !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             #ccc !default;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-light !default;
+$btn-primary-border:			 $brand-light !default;
+$btn-primary-box-shadow:		 #065577;
+$btn-primary-bg-hover:			 #0078AB;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             darken($btn-success-bg, 0%) !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 0%) !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 0%) !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              darken($btn-danger-bg, 0%) !default;
+

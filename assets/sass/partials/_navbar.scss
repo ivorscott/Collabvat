@@ -1,0 +1,71 @@
+/* =========================================
+   NAVBAR
+============================================ */
+
+.navbar-fixed-top {
+// Remove Default Border Below Navbar
+  border-bottom: 0;
+  min-height: 40px;
+  height: 0;
+}
+.navbar-form {
+  padding:0;
+  .form-control {
+    color:#000;
+  }
+  .input-group {
+    position:relative;
+    top:-5px;
+    width:100%;
+  }
+  .input-group-addon {
+    padding: 6px;
+    color:#404040;
+  }
+}
+.navbar-fixed-top {
+  .navbar-brand {
+    padding-top: $navbar-padding-top;
+    padding-bottom: $navbar-padding-bottom;
+    img {
+      display: inline;
+    }
+  }
+  .navbar-toggle {
+    margin-top: 3px!important;
+    background: #333;
+  }
+  .navbar-nav {
+    .active a {
+      border-top: solid 3px #024561;
+      padding-top: $navbar-padding-top - 3px;
+    }
+    > li > a {
+      padding-top: $navbar-padding-top;
+      padding-bottom: $navbar-padding-bottom;
+    }
+    .active a::before {
+      // Add White Caret At Current Navbar Location
+      bottom: 0px;
+      top: auto;
+      left: 50%;
+      content: "";
+      display: block;
+      position: absolute;
+      border-color: transparent transparent #FFF;
+      border-style: solid;
+      border-width: 0px 8px 8px;
+      height: 0px;
+      margin-left: -8px;
+      width: 0px;
+      z-index: 0;
+      color: #FFF;
+      font-style: normal;
+      font-weight: normal;
+      color: #FFF;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+}

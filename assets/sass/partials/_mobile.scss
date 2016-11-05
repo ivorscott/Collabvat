@@ -1,0 +1,42 @@
+/* =========================================
+   MOBILE DEVICES
+============================================ */
+
+@media screen and (max-width: 775px) {
+  .navbar-form .input-group {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+/* ==========================
+   NAVBAR SPECIFIC STYLES
+============================= */
+
+  // Dropdown Header
+  .navbar-inverse .navbar-collapse .dropdown-header {
+    color:#82daff;
+  }
+  // Primary Navigation (hamburger menu)
+  .navbar-default .navbar-header .navbar-toggle {
+    margin-top: 3px;
+  }
+  .navbar-inverse .navbar-nav .active a {
+    border:none;
+  }
+  .navbar-inverse .navbar-collapse {
+    background: #7647A2;
+    border:none;
+  }
+  // Remove Arrowhead Page Indicator
+  .navbar-nav .active a::before {
+    display:none!important;
+  }
+  /* ==========================
+     MISC.
+  ============================= */
+
+  .jumbotron {
+    padding-left:15px;
+    padding-right:15px;
+  }
+}
