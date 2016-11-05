@@ -22,11 +22,11 @@ $roomTime = ($room->timestamp) ? $room->timestamp : 0 ;
 </script>
 <div id="room-pane">
   <div id="room">
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
     <div id="media">
       <img class="fullView" data-id="" src="/assets/images/placeholder.png">
     </div>
-    <button id="prev">Prev</button>
-    <button id="next">Next</button>
     <aside class="room-author">
       <div class="details-wrapper">
         <div class="details-header">

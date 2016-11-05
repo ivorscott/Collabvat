@@ -57,8 +57,9 @@
   }
 ?>
 <div id="chatroom-pane" class="chat-rooms">
-  <h2>Active Rooms</h2>
-  <div id="selectroom"><?php echo $r; ?></div>
+  <div id="selectroom">
+    <h2>Active Rooms</h2>
+    <?php echo $r; ?></div>
   <div id="chatControls">
     <button id="prev">Prev</button>
     <button id="next">Next</button>

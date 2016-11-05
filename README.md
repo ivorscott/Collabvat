@@ -3,6 +3,9 @@
 ## Collabvat
 Collabvat is a central hub where creatives get together to critique art, share ideas, events and more.  
 
+![Alt text](/assets/images/example.gif?raw=true "Preview")
+
+
 ## Purpose ##
 Many artists have a hard time making a living and gaining insightful feedback about their work. What can be done now to
 support them? There is an astonishing amount of resources available for artists: jobs, grants, schools and residencies
