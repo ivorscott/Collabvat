@@ -1,30 +1,30 @@
 <?php
 
 class Activity {
-  
+
   private $display_name = '<em>Anon</em>';
   private $image = null;
   private $action_text = null;
   private $date = null;
   private $id;
   private $type;
-  
+
   public function __construct($activity_type, $action_text, $options = array()) {
     $options = $this->set_default_options($options);
     date_default_timezone_set($options['timezone']);
     $this->type = $activity_type;
     $this->id = uniqid();
     $this->date = date('r');
-    
+
     $this->action_text = $action_text;
     $this->display_name = $options['displayName'];
     $this->image = $options['image'];
-    
+
     if( $options['get_gravatar'] &&
         $options['email'] ) {
-         
+
       $this->image['url'] = $this->get_gravatar($options['email'], '/assets/images/placeholder-user.png');
-      
+
       if( is_null($this->display_name) ) {
         $profile = $this->get_gravatar_profile($options['email']);
         if( isset($profile['displayName']) ) {
@@ -33,7 +33,7 @@ class Activity {
       }
     }
   }
-  
+
   public function getMessage() {
     $activity = array(
       'id' => $this->id,
@@ -49,7 +49,7 @@ class Activity {
     // save in database
     return $activity;
   }
-  
+
   private function set_default_options($options) {
     $defaults = array ( 'email' => null,
                         'displayName' => null,
@@ -66,7 +66,7 @@ class Activity {
     }
     return $options;
   }
-  
+
   // from: http://en.gravatar.com/site/implement/images/php/
   /**
    * Get either a Gravatar URL or complete image tag for a specified email address.
@@ -87,7 +87,7 @@ class Activity {
 
       if ( $img ) {
            $url = '<img src="' . $url . '"';
-           foreach ( $atts as $key => $val ) 
+           foreach ( $atts as $key => $val )
                $url .= ' ' . $key . '="' . $val . '"';
            $url .= ' />';
        }
@@ -113,14 +113,14 @@ class Activity {
       return 'true';
     }
   }
-  
-  
+
+
   private function get_gravatar_profile($email) {
     $profile = null;
     $hash = $this->get_email_hash($email);
-    
+
     $url = 'http://en.gravatar.com/' . $hash . '.php';
-    
+
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_HEADER, false);
@@ -130,17 +130,17 @@ class Activity {
     $response = curl_exec($curl);
     $status = curl_getinfo($curl);
     curl_close($curl);
-    
+
     // doesn't work on phpfog shared environment
     //$response = file_get_contents( $url );
-    
+
     $unserialized = unserialize( $response );
     if ( is_array( $unserialized ) && isset( $unserialized['entry'] ) ) {
       $profile = $unserialized['entry'][0];
     }
     return $profile;
   }
-  
+
   private function get_email_hash($email) {
     return md5( strtolower( trim( $email ) ) );
   }
