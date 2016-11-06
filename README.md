@@ -34,12 +34,9 @@ This is a PHP application. I only use node for npm.
 [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html)
 2. Start up MYSQL server, and Apache.
 3. Go to [localhost/phpmyadmin](http://localhost/phpmyadmin)
-
-        credentials: -u root -p  
-
-4. Create database called *collabvat*
+4. Create database called *collabvat* and select it
 5. Import collabvat.sql
-6. Register a new virtual host in Apache
+6. Register a new virtual host in Apache (I use Mac, but this should be similar on other OS)
 
         $ vim /Applications/XAMPP/xamppfiles/etc/httpd.conf
 
@@ -56,12 +53,16 @@ This is a PHP application. I only use node for npm.
 
 8. Restart the Apache Server.
 
-### Clone Repository
+9. Clone Repository and change folder permission
 
         $ cd /Applications/XAMPP/xamppfiles/htdocs    
         $ git clone https://github.com/ivorscott/collabvat.git    
         $ cd collabvat  
         $ chmod o+w model/images
+
+10. copy config.sample.php and make config.php you won't need to change the file unless
+ you change the database credentials because after a clean installation of XAMP
+ the user is 'root' and there is no password
 
 ### Get Dependencies
 
