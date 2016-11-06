@@ -1,4 +1,7 @@
 <?php
+
+define('SCRIPT_BASE', realpath(dirname(__FILE__)));
+
 require_once SCRIPT_BASE . "../config.php";
 
 function autoload($class) {
