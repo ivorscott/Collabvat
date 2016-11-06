@@ -11,18 +11,24 @@ ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
 
-require_once  __DIR__ . "/config.php";
-require_once  __DIR__ . "/functions.php";
+define('SCRIPT_BASE', realpath(dirname(__FILE__)));
+echo SCRIPT_BASE;
+// Ensure library is on include_path
+set_include_path(
+    get_include_path() . PATH_SEPARATOR . SCRIPT_BASE
+);
+require_once  SCRIPT_BASE . "/config.php";
+require_once  SCRIPT_BASE . "/functions.php";
 
 function autoload($class) {
-  if(file_exists( __DIR__ . '/classes/' . $class . '.php')) {
-    require_once  __DIR__ . '/classes/' . $class . '.php';
+  if(file_exists( SCRIPT_BASE . '/classes/' . $class . '.php')) {
+    require_once  SCRIPT_BASE . '/classes/' . $class . '.php';
   } else {
     if(strstr($class,'Model')) {
       $name = explode('Model', $class);
       $class = $name[0];
     }
-    require_once __DIR__ . '/models/' . strtolower($class) . '.php';
+    require_once SCRIPT_BASE . '/models/' . strtolower($class) . '.php';
   }
 }
 
