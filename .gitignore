@@ -1,6 +1,7 @@
 # Files/Folders to ignore
 node_modules
-models/images
+models/images/*
+!models/images/.gitkeep
 .idea
 .DS_Store
 config.php
