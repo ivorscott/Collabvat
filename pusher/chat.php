@@ -2,25 +2,25 @@
 
 define('SCRIPT_BASE', realpath(dirname(__FILE__)));
 
-require_once SCRIPT_BASE . "../config.php";
+require_once SCRIPT_BASE . "/../config.php";
 
 function autoload($class) {
-  if(file_exists(SCRIPT_BASE . '../classes/' . $class . '.php')) {
-    require_once SCRIPT_BASE . '../classes/' . $class . '.php';
+  if(file_exists(SCRIPT_BASE . '/../classes/' . $class . '.php')) {
+    require_once SCRIPT_BASE . '/../classes/' . $class . '.php';
   } else if(strstr($class, 'Controller')) {
-    require_once SCRIPT_BASE . '../controllers/' . strtolower(strstr($class, 'Controller', true)) . '.php';
+    require_once SCRIPT_BASE . '/../controllers/' . strtolower(strstr($class, 'Controller', true)) . '.php';
   } else {
     if(strstr($class,'Model')) {
       $name = explode('Model', $class);
       $class = $name[0];
     }
-    require_once SCRIPT_BASE . '../models/' . strtolower($class) . '.php';
+    require_once SCRIPT_BASE . '/../models/' . strtolower($class) . '.php';
   }
 }
 spl_autoload_register('autoload');
-require_once(SCRIPT_BASE . './vendor/autoload.php');
-require_once(SCRIPT_BASE . 'Activity.php');
-require_once(SCRIPT_BASE . 'config.php');
+require_once(SCRIPT_BASE . '/vendor/autoload.php');
+require_once(SCRIPT_BASE . '/Activity.php');
+require_once(SCRIPT_BASE . '/config.php');
 
 $chat_info = $_POST['chat_info'];
 $room_id =  $_POST['chat_info']['room'];
